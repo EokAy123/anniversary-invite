@@ -1,0 +1,100 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>A Anniversary Date with EoKay</title>
+  <style>
+    body {
+      margin: 0;
+      background-color: #ffe6f0;
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      overflow: hidden;
+    }
+    .envelope {
+      width: 300px;
+      height: 200px;
+      background: pink;
+      border: 4px solid #ff99cc;
+      border-radius: 10px;
+      position: relative;
+      cursor: pointer;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    .envelope::before {
+      content: 'A Anniversary Date with EoKay\A For My Sweetheart';
+      white-space: pre;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: url('https://i.pinimg.com/originals/44/d6/e9/44d6e9c3681c2b31e8801f6189de1189.png') no-repeat center center;
+      background-size: contain;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-weight: bold;
+      font-size: 16px;
+      text-align: center;
+      color: #d63384;
+      border-radius: 10px;
+      z-index: 2;
+    }
+    .letter {
+      width: 280px;
+      height: 360px;
+      background: #fff0f5;
+      border: 2px solid #ffc0cb;
+      padding: 20px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+      overflow-y: auto;
+      font-size: 14px;
+      line-height: 1.6;
+      position: absolute;
+      z-index: 1;
+      opacity: 0;
+      transition: opacity 0.8s ease-in-out;
+    }
+    .show-letter .letter {
+      opacity: 1;
+      z-index: 3;
+    }
+    audio {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="envelope" onclick="openLetter()">
+    <div class="letter" id="letterContent">
+      <p>EoKay xin mời bạn trẻ cùng đến buổi hẹn hò nhân ngày kỉ niệm 2 tháng của đứa mình!</p>
+      <p><strong>🗓 Thời gian:</strong> 16h00, Thứ Ba 28/06/2025</p>
+      <p><strong>📍 Địa điểm:</strong> Anh sẽ đến đón em tại nhà. Sau đó chúng mình sẽ đi bộ tới:</p>
+      <ul>
+        <li>16h15: chụp ảnh photobooth tại Nova K-Pop Star, Lower Level (5640 Spring Garden Rd B102, Halifax, NS B3J 3M7)</li>
+        <li>16h30: Đi dạo đâu đó vòng vòng nói chuyện với nhau</li>
+        <li>17h15: Đi ăn nhẹ + cà phê + chụp hình lần 1 ở quán cafe Creme (1341 Lower Water Street, Unit 123, Halifax NS, B3J 3R3)</li>
+        <li>18h30: Dùng bữa tối tại Water Polo (1341 Lower Water Street Halifax B3J 3Z2)</li>
+      </ul>
+      <p><strong>💬 Lưu ý nhỏ:</strong></p>
+      <ul>
+        <li>Đồ vật cần mang: một trái tim yêu anh 💖</li>
+        <li>Tinh thần: thoải mái và máy ảnh instax + ID BBI nhé ✨</li>
+      </ul>
+      <p>Đừng quên mang theo nụ cười thật tươi nhé! 🌼</p>
+    </div>
+  </div>
+  <audio autoplay loop>
+    <source src="https://files.freemusicarchive.org/storage-freemusicarchive-org/music/no_curator/Komiku/Its_time_for_adventure/Komiku_-_03_-_Friends_Lovers.mp3" type="audio/mpeg">
+  </audio>
+  <script>
+    function openLetter() {
+      document.querySelector('.envelope').classList.toggle('show-letter');
+    }
+  </script>
+</body>
+</html>
